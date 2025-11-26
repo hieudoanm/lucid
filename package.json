@@ -26,7 +26,7 @@
   "resolutions": {
     "axios": "1.13.2",
     "body-parser": "2.2.1",
-    "cookie": "1.1.0",
+    "cookie": "1.1.1",
     "cross-spawn": "7.0.6",
     "debug": "4.4.3",
     "express": "5.1.0",
