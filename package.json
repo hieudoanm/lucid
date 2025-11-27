@@ -14,7 +14,7 @@
   "keywords": [],
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
-  "packageManager": "pnpm@10.23.0",
+  "packageManager": "pnpm@10.24.0",
   "devDependencies": {
     "docsify-cli": "4.4.4",
     "husky": "9.1.7",
