@@ -1,0 +1,50 @@
+name: Nest.js CI
+
+on:
+  push:
+    branches:
+      - "master"
+      - "develop"
+      - "hotfix/**"
+      - "feature/**"
+      - "renovate/**"
+      - "dependabot/**"
+    paths:
+      - "packages/micro-core-banking/typescript/**" # Only trigger when files in the `ts` folder change
+
+jobs:
+  ci:
+    name: Nest.js CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24.11.1
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('ts/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Install dependencies
+        run: pnpm install
+        working-directory: packages/micro-core-banking/typescript
+
+      - name: Run build
+        run: pnpm run build
+        working-directory: packages/micro-core-banking/typescript
+
+      - name: Run tests
+        run: pnpm run test
+        working-directory: packages/micro-core-banking/typescript

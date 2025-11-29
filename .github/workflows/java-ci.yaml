@@ -1,0 +1,52 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - "master" # Main production branch
+      - "develop" # Development branch
+      - "hotfix/**" # Hotfix branches
+      - "feature/**" # Feature branches
+      - "renovate/**" # Renovate bot branches
+      - "dependabot/**" # Dependabot branches
+    paths:
+      - "packages/micro-core-banking/java/**"
+
+jobs:
+  ci:
+    name: Java CI
+    runs-on: macos-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      # Step 2: Setup Java 21 (installed via Homebrew)
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      # Step 3: Cache Gradle dependencies
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      # Step 4: Verify Gradle wrapper
+      - name: Verify Gradle Wrapper
+        run: ./gradlew wrapper --gradle-version 9.1.0
+        working-directory: packages/micro-core-banking/java
+
+      # Step 5: Build App
+      - name: Build
+        run: ./gradlew clean build --info
+        working-directory: packages/micro-core-banking/java
