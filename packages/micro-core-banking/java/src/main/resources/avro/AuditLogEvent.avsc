@@ -1,0 +1,20 @@
+{
+  "namespace": "io.github.hieudoanm.micro.core.banking.avro",
+  "type": "record",
+  "name": "AuditLogEvent",
+  "fields": [
+    { "name": "eventId", "type": "string" },
+    { "name": "action", "type": "string" },
+    { "name": "entityId", "type": "long" },
+    { "name": "entityType", "type": "string" },
+    { "name": "message", "type": "string" },
+    { "name": "createdBy", "type": "string" },
+    {
+      "name": "createdAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}

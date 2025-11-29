@@ -1,0 +1,129 @@
+import com.github.davidmc24.gradle.plugin.avro.GenerateAvroJavaTask
+
+plugins {
+    id 'java'
+    id 'checkstyle'
+    id 'pmd'
+    id 'org.springframework.boot' version '4.0.0'
+    id 'io.spring.dependency-management' version '1.1.7'
+    id 'com.github.davidmc24.gradle.plugin.avro' version '1.9.1'
+    id 'com.diffplug.spotless' version '8.1.0'
+    id "org.springdoc.openapi-gradle-plugin" version "1.9.0"
+}
+
+group = 'io.github.hieudoanm'
+version = '0.0.1-SNAPSHOT'
+description = 'micro-core-banking'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // --- Lombok ---
+    annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
+    implementation 'org.projectlombok:lombok'
+
+    // --- Jackson (JSON handling) ---
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation 'com.fasterxml.jackson.core:jackson-core'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations'
+    implementation 'com.fasterxml.jackson.module:jackson-module-scala_2.13'
+
+    // --- Database ---
+    implementation 'org.flywaydb:flyway-database-postgresql'
+    runtimeOnly 'org.postgresql:postgresql'
+
+    // --- Spring Boot ---
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // --- Spring Doc ---
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.0'
+
+    // --- Kafka ---
+    implementation 'org.springframework.kafka:spring-kafka'
+
+    // --- Avro ---
+    implementation 'org.apache.avro:avro:1.12.1' // Core Avro library
+
+    // --- Test dependencies ---
+    testImplementation 'com.h2database:h2'
+    testImplementation 'org.mockito:mockito-core'
+    testImplementation 'org.mockito:mockito-junit-jupiter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
+    testImplementation 'org.testcontainers:kafka'
+}
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+/**
+ * -------------------------
+ * Checkstyle Configuration
+ * -------------------------
+ */
+checkstyle {
+    toolVersion = '12.1.2' // Latest stable version
+    config = resources.text.fromFile('config/checkstyle/checkstyle.xml')
+    ignoreFailures = false  // Fail build if violations are found
+}
+
+tasks.withType(Checkstyle).configureEach {
+    reports {
+        xml.required = false
+        html.required = true
+        html.outputLocation = file("$buildDir/reports/checkstyle/checkstyle.html")
+    }
+}
+
+/**
+ * -------------------------
+ * PMD Configuration
+ * -------------------------
+ */
+pmd {
+    toolVersion = '7.19.0' // Latest PMD version
+    ruleSets = [] // We'll use a custom ruleset instead of defaults
+    ruleSetFiles = files('config/pmd/pmd-ruleset.xml')
+    ignoreFailures = true  // Fail build if PMD violations are found
+}
+
+tasks.withType(Pmd).configureEach {
+    exclude "**/avro/**"
+    reports {
+        xml.required = false
+        html.required = true
+        html.outputLocation = file("$buildDir/reports/pmd/pmd.html")
+    }
+}
+
+def generateAvro = tasks.register("generateAvro", GenerateAvroJavaTask) {
+    source("src/main/resources/avro")
+    outputDir = file("src/main/java")
+}
+
+spotless {
+    java {
+        googleJavaFormat()  // auto-format according to Google Java Style
+    }
+}
+
+// Enable dependency locking for reproducible builds
+dependencyLocking {
+  // Lock all configurations (implementation, testImplementation, etc.)
+  lockAllConfigurations()
+}

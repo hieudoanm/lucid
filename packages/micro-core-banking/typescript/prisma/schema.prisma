@@ -1,0 +1,94 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  schemas  = "micro_core_banking"
+}
+
+model AuditLog {
+  id         Int      @id @default(autoincrement()) @map("id")
+  action     String   @default("") @map("action") @db.VarChar(50)
+  entityType String   @default("") @map("entity_type") @db.VarChar(50)
+  entityId   Int      @default(0) @map("entity_id")
+  message    String   @default("") @map("message") @db.Text
+  createdBy  String   @default("") @map("created_by") @db.VarChar(50)
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz()
+  updatedAt  DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@map("audit_logs")
+  @@schema("micro_core_banking")
+}
+
+model Account {
+  id            Int           @id @default(autoincrement()) @map("id")
+  accountNumber String        @unique @default("") @map("account_number") @db.VarChar(20)
+  customerId    String        @default("") @map("customer_id") @db.VarChar(36)
+  accountType   AccountType   @map("account_type")
+  balance       Decimal       @default(0) @map("balance") @db.Decimal(15, 2)
+  currency      String        @map("currency") @db.VarChar(3)
+  status        AccountStatus @default(ACTIVE) @map("status")
+  createdAt     DateTime      @default(now()) @map("created_at")
+  updatedAt     DateTime      @default(now()) @updatedAt @map("updated_at")
+
+  // Relationships
+  transactions        Transaction[] @relation(name: "Account")
+  relatedTransactions Transaction[] @relation(name: "RelatedAccount")
+
+  @@map("accounts")
+  @@schema("micro_core_banking")
+}
+
+enum AccountType {
+  SAVINGS
+  CHECKING
+  CREDIT
+  // add other types here
+
+  @@schema("micro_core_banking")
+}
+
+enum AccountStatus {
+  ACTIVE
+  INACTIVE
+  CLOSED
+  // add other statuses here
+
+  @@schema("micro_core_banking")
+}
+
+enum TransactionType {
+  DEPOSIT
+  WITHDRAWAL
+  TRANSFER
+  // add other types here
+
+  @@schema("micro_core_banking")
+}
+
+model Transaction {
+  id              Int             @id @default(autoincrement()) @map("id")
+  transactionRef  String          @unique @default("") @map("transaction_ref") @db.VarChar(36)
+  transactionType TransactionType @map("transaction_type")
+  amount          Decimal         @default(0) @map("amount") @db.Decimal(15, 2)
+  currency        String          @default("") @map("currency") @db.VarChar(3)
+  description     String?         @default("") @map("description") @db.VarChar(255)
+  createdAt       DateTime        @default(now()) @map("created_at")
+  updatedAt       DateTime        @default(now()) @updatedAt @map("updated_at")
+
+  // Relations
+  account          Account  @relation(name: "Account", fields: [accountId], references: [id])
+  accountId        Int
+  relatedAccount   Account? @relation(name: "RelatedAccount", fields: [relatedAccountId], references: [id])
+  relatedAccountId Int?
+
+  @@map("transactions")
+  @@schema("micro_core_banking")
+}

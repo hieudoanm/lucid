@@ -1,0 +1,28 @@
+{
+  "namespace": "io.github.hieudoanm.micro.core.banking.avro",
+  "type": "record",
+  "name": "TransactionEvent",
+  "fields": [
+    { "name": "eventId", "type": "string" },
+    { "name": "transactionId", "type": "string" },
+    { "name": "accountNumber", "type": "string" },
+    { "name": "type", "type": { "type": "enum", "name": "TransactionType", "symbols": ["DEPOSIT", "WITHDRAWAL", "TRANSFER"] }},
+    {
+      "name": "amount",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 19,
+        "scale": 2
+      }
+    },
+    { "name": "currency", "type": "string" },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    }
+  ]
+}
