@@ -32,11 +32,11 @@ importers:
         specifier: 9.1.7
         version: 9.1.7
       prettier:
-        specifier: 3.7.2
-        version: 3.7.2
+        specifier: 3.7.3
+        version: 3.7.3
       prettier-plugin-tailwindcss:
         specifier: 0.7.1
-        version: 0.7.1(prettier-plugin-svelte@3.4.0(prettier@3.7.2)(svelte@5.39.9))(prettier@3.7.2)
+        version: 0.7.1(prettier-plugin-svelte@3.4.0(prettier@3.7.3)(svelte@5.39.9))(prettier@3.7.3)
       rimraf:
         specifier: 6.1.2
         version: 6.1.2
@@ -63,8 +63,8 @@ importers:
         specifier: 9.39.1
         version: 9.39.1(jiti@2.6.1)
       prettier:
-        specifier: 3.7.2
-        version: 3.7.2
+        specifier: 3.7.3
+        version: 3.7.3
       ts-node:
         specifier: 10.9.2
         version: 10.9.2(@types/node@24.10.1)(typescript@5.9.3)
@@ -112,8 +112,8 @@ importers:
         specifier: 3.9.2
         version: 3.9.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       prettier:
-        specifier: 3.7.2
-        version: 3.7.2
+        specifier: 3.7.3
+        version: 3.7.3
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -143,8 +143,8 @@ importers:
         specifier: 16.5.0
         version: 16.5.0
       prettier:
-        specifier: 3.7.2
-        version: 3.7.2
+        specifier: 3.7.3
+        version: 3.7.3
       typescript-eslint:
         specifier: 8.48.0
         version: 8.48.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
@@ -250,7 +250,7 @@ importers:
         version: 10.1.8(eslint@9.39.1(jiti@2.6.1))
       eslint-plugin-prettier:
         specifier: 5.5.4
-        version: 5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.6.1)))(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.2)
+        version: 5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.6.1)))(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.3)
       globals:
         specifier: 16.5.0
         version: 16.5.0
@@ -261,8 +261,8 @@ importers:
         specifier: 2.0.1
         version: 2.0.1
       prettier:
-        specifier: 3.7.2
-        version: 3.7.2
+        specifier: 3.7.3
+        version: 3.7.3
       prisma:
         specifier: 7.0.1
         version: 7.0.1(@types/react@19.2.7)(magicast@0.3.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
@@ -356,7 +356,7 @@ importers:
         version: 24.10.1
       '@webpack-cli/generators':
         specifier: 3.0.7
-        version: 3.0.7(@types/node@24.10.1)(encoding@0.1.13)(mem-fs@2.3.0)(prettier@3.7.2)(webpack-cli@6.0.1)(webpack@5.103.0)
+        version: 3.0.7(@types/node@24.10.1)(encoding@0.1.13)(mem-fs@2.3.0)(prettier@3.7.3)(webpack-cli@6.0.1)(webpack@5.103.0)
       eslint:
         specifier: 9.39.1
         version: 9.39.1(jiti@2.6.1)
@@ -367,11 +367,11 @@ importers:
         specifier: 3.1.11
         version: 3.1.11
       prettier:
-        specifier: 3.7.2
-        version: 3.7.2
+        specifier: 3.7.3
+        version: 3.7.3
       prettier-plugin-tailwindcss:
         specifier: 0.7.1
-        version: 0.7.1(prettier-plugin-svelte@3.4.0(prettier@3.7.2)(svelte@5.39.9))(prettier@3.7.2)
+        version: 0.7.1(prettier-plugin-svelte@3.4.0(prettier@3.7.3)(svelte@5.39.9))(prettier@3.7.3)
       prisma:
         specifier: 7.0.1
         version: 7.0.1(@types/react@19.2.7)(magicast@0.3.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
@@ -9199,8 +9199,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.7.2:
-    resolution: {integrity: sha512-n3HV2J6QhItCXndGa3oMWvWFAgN1ibnS7R9mt6iokScBOC0Ul9/iZORmU2IWUMcyAQaMPjTlY3uT34TqocUxMA==}
+  prettier@3.7.3:
+    resolution: {integrity: sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -16637,14 +16637,14 @@ snapshots:
       webpack: 5.103.0(webpack-cli@6.0.1)
       webpack-cli: 6.0.1(webpack@5.103.0)
 
-  '@webpack-cli/generators@3.0.7(@types/node@24.10.1)(encoding@0.1.13)(mem-fs@2.3.0)(prettier@3.7.2)(webpack-cli@6.0.1)(webpack@5.103.0)':
+  '@webpack-cli/generators@3.0.7(@types/node@24.10.1)(encoding@0.1.13)(mem-fs@2.3.0)(prettier@3.7.3)(webpack-cli@6.0.1)(webpack@5.103.0)':
     dependencies:
       webpack: 5.103.0(webpack-cli@6.0.1)
       webpack-cli: 6.0.1(webpack@5.103.0)
       yeoman-environment: 3.19.3(@types/node@24.10.1)
       yeoman-generator: 5.10.0(encoding@0.1.13)(mem-fs@2.3.0)(yeoman-environment@3.19.3(@types/node@24.10.1))
     optionalDependencies:
-      prettier: 3.7.2
+      prettier: 3.7.3
     transitivePeerDependencies:
       - '@types/node'
       - bluebird
@@ -18516,10 +18516,10 @@ snapshots:
     dependencies:
       eslint: 9.39.1(jiti@2.6.1)
 
-  eslint-plugin-prettier@5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.6.1)))(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.2):
+  eslint-plugin-prettier@5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.6.1)))(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.3):
     dependencies:
       eslint: 9.39.1(jiti@2.6.1)
-      prettier: 3.7.2
+      prettier: 3.7.3
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.11
     optionalDependencies:
@@ -22750,19 +22750,19 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier-plugin-svelte@3.4.0(prettier@3.7.2)(svelte@5.39.9):
+  prettier-plugin-svelte@3.4.0(prettier@3.7.3)(svelte@5.39.9):
     dependencies:
-      prettier: 3.7.2
+      prettier: 3.7.3
       svelte: 5.39.9
     optional: true
 
-  prettier-plugin-tailwindcss@0.7.1(prettier-plugin-svelte@3.4.0(prettier@3.7.2)(svelte@5.39.9))(prettier@3.7.2):
+  prettier-plugin-tailwindcss@0.7.1(prettier-plugin-svelte@3.4.0(prettier@3.7.3)(svelte@5.39.9))(prettier@3.7.3):
     dependencies:
-      prettier: 3.7.2
+      prettier: 3.7.3
     optionalDependencies:
-      prettier-plugin-svelte: 3.4.0(prettier@3.7.2)(svelte@5.39.9)
+      prettier-plugin-svelte: 3.4.0(prettier@3.7.3)(svelte@5.39.9)
 
-  prettier@3.7.2: {}
+  prettier@3.7.3: {}
 
   pretty-bytes@5.6.0: {}
 
