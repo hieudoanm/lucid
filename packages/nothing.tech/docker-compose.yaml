@@ -15,7 +15,7 @@ services:
           memory: 512M
 
   kafka:
-    image: confluentinc/cp-kafka:8.1.0
+    image: confluentinc/cp-kafka:8.1.1
     container_name: kafka
     restart: always
     depends_on:
