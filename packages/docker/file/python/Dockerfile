@@ -1,4 +1,4 @@
-FROM python:3.14.0
+FROM python:3.14.1
 
 # Assign environments
 ENV ENVIRONMENT='production'
