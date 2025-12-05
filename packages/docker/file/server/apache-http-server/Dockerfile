@@ -1,5 +1,5 @@
 # Use the official Apache HTTP Server image as a base image
-FROM httpd:2.4.65
+FROM httpd:2.4.66
 
 # Copy custom Apache configuration file (optional)
 # Replace "httpd.conf" with your custom configuration file
