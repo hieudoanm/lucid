@@ -5,8 +5,6 @@ import { postRoute as postGraphQlRoute } from './graphql/post';
 import { postRoute as postInstagramDownloadRoute } from './instagram/download/post';
 import { postRoute as postConvertRoute } from './pdfmake/convert/post';
 import { postRoute as postStockfishEvaluate } from './stockfish/evaluate/post';
-import { postRoute as postYouTubeDownloadRoute } from './youtube/download/post';
-import { postRoute as postYouTubeDonwloadTriggerRoute } from './youtube/download/trigger/post';
 
 export const apiRoutes = [
   { method: 'GET', path: '/api/chess/titled', function: getChessTitledRoute },
@@ -27,15 +25,5 @@ export const apiRoutes = [
     method: 'POST',
     path: '/api/stockfish/evaluate',
     function: postStockfishEvaluate,
-  },
-  {
-    method: 'POST',
-    path: '/api/youtube/download',
-    function: postYouTubeDownloadRoute,
-  },
-  {
-    method: 'POST',
-    path: '/api/youtube/download/trigger',
-    function: postYouTubeDonwloadTriggerRoute,
   },
 ];
