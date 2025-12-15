@@ -26,6 +26,10 @@
   "directories": {
     "example": "examples"
   },
+  "engines": {
+    "node": "24.12.0"
+  },
+  "packageManager": "pnpm@10.26.0",
   "scripts": {
     "format": "prettier --cache --write .",
     "prelint": "pnpm prisma:generate",
@@ -76,6 +80,5 @@
     "typescript-eslint": "8.49.0",
     "webpack": "5.103.0",
     "webpack-cli": "6.0.1"
-  },
-  "packageManager": "pnpm@10.25.0"
+  }
 }
