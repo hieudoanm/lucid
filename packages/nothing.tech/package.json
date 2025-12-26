@@ -49,7 +49,7 @@
     "@prisma/client": "7.2.0",
     "graphql": "16.12.0",
     "html-to-pdfmake": "2.5.32",
-    "jsdom": "27.3.0",
+    "jsdom": "27.4.0",
     "kafkajs": "2.2.4",
     "node-easyocr": "1.0.9",
     "pdf2html": "4.4.0",
