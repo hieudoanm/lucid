@@ -30,7 +30,7 @@
     "cross-spawn": "7.0.6",
     "debug": "4.4.3",
     "express": "5.2.1",
-    "got": "14.6.5",
+    "got": "14.6.6",
     "marked": "17.0.1",
     "nanoid": "5.1.6",
     "postcss": "8.5.6",
