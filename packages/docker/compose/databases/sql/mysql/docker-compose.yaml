@@ -1,6 +1,6 @@
 services:
   mysql:
-    image: mysql:9.5 # Pin to a stable version
+    image: mysql:9.6 # Pin to a stable version
     container_name: mysql
     hostname: mysql
     restart: unless-stopped
