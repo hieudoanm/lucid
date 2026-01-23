@@ -2,7 +2,7 @@
 # ✅ Stage 1 — Build (optional for caching deps)
 # ====================================
 
-FROM denoland/deno:2.6.5 AS builder
+FROM denoland/deno:2.6.6 AS builder
 
 # The working directory inside the container
 WORKDIR /app
@@ -19,7 +19,7 @@ RUN deno cache main.ts
 # ====================================
 
 # Use a clean official Deno runtime image
-FROM denoland/deno:2.6.5
+FROM denoland/deno:2.6.6
 
 # Set working directory
 WORKDIR /app
