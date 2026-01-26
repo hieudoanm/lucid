@@ -31,7 +31,7 @@
     "@nestjs/terminus": "11.0.0",
     "@nestjs/throttler": "6.5.0",
     "@prisma/client": "7.3.0",
-    "axios": "1.13.2",
+    "axios": "1.13.3",
     "class-validator": "0.14.3",
     "compression": "1.8.1",
     "cookie-parser": "1.4.7",
