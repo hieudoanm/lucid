@@ -235,8 +235,8 @@ importers:
         specifier: 1.7.0
         version: 1.7.0
       '@types/html-to-pdfmake':
-        specifier: 2.4.4
-        version: 2.4.4
+        specifier: 2.4.5
+        version: 2.4.5
       '@types/ip':
         specifier: 1.1.3
         version: 1.1.3
@@ -1650,8 +1650,8 @@ packages:
   '@types/figlet@1.7.0':
     resolution: {integrity: sha512-KwrT7p/8Eo3Op/HBSIwGXOsTZKYiM9NpWRBJ5sVjWP/SmlS+oxxRvJht/FNAtliJvja44N3ul1yATgohnVBV0Q==}
 
-  '@types/html-to-pdfmake@2.4.4':
-    resolution: {integrity: sha512-2dt44vpbftXWuObFP3UmQwsl6BGCuByxa6IXaIVLn1TqvWDJ6ithkKbiTuWjxmlpCG9vrLJNZYnckbuKQPf19w==}
+  '@types/html-to-pdfmake@2.4.5':
+    resolution: {integrity: sha512-7cGKU4b3UwQBxwjeouQ6k4JMT5CEqzMlYwk3Q2jPNtlERbYnm4NSeQ4FlV57Qde62WSLxsIXtY1idi8QiLWtdA==}
 
   '@types/http-cache-semantics@4.0.4':
     resolution: {integrity: sha512-1m0bIFVc7eJWyve9S0RnuRgcQqF/Xd5QsUZAZeQFr1Q3/p9JWoQQEqmVy+DPTNpGXwhgIetAoYF8JSc33q29QA==}
@@ -8054,7 +8054,7 @@ snapshots:
 
   '@types/figlet@1.7.0': {}
 
-  '@types/html-to-pdfmake@2.4.4':
+  '@types/html-to-pdfmake@2.4.5':
     dependencies:
       '@types/jsdom': 27.0.0
       '@types/pdfmake': 0.2.12
