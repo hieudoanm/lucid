@@ -1,5 +1,5 @@
 # Use the official HAProxy image from Docker Hub
-FROM haproxy:3.3.1
+FROM haproxy:3.3.2
 
 # Copy your custom HAProxy configuration file (optional)
 # Replace "haproxy.cfg" with your custom configuration file
