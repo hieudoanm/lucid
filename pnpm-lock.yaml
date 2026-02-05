@@ -62,8 +62,8 @@ importers:
         specifier: 11.1.13
         version: 11.1.13(@nestjs/common@11.1.13(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.13)
       '@nestjs/swagger':
-        specifier: 11.2.5
-        version: 11.2.5(@nestjs/common@11.1.13(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.13)(class-validator@0.14.3)(reflect-metadata@0.2.2)
+        specifier: 11.2.6
+        version: 11.2.6(@nestjs/common@11.1.13(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.13)(class-validator@0.14.3)(reflect-metadata@0.2.2)
       '@nestjs/terminus':
         specifier: 11.0.0
         version: 11.0.0(@nestjs/axios@4.0.1(@nestjs/common@11.1.13(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(axios@1.13.4)(rxjs@7.8.2))(@nestjs/common@11.1.13(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.13)(@prisma/client@7.3.0(prisma@7.3.0(@types/react@19.2.7)(magicast@0.3.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3))(typescript@5.9.3))(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -222,8 +222,8 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       puppeteer:
-        specifier: 24.36.1
-        version: 24.36.1(typescript@5.9.3)
+        specifier: 24.37.0
+        version: 24.37.0(typescript@5.9.3)
       stockfish:
         specifier: 17.1.0
         version: 17.1.0
@@ -1186,8 +1186,8 @@ packages:
     peerDependencies:
       typescript: '>=4.8.2'
 
-  '@nestjs/swagger@11.2.5':
-    resolution: {integrity: sha512-wCykbEybMqiYcvkyzPW4SbXKcwra9AGdajm0MvFgKR3W+gd1hfeKlo67g/s9QCRc/mqUU4KOE5Qtk7asMeFuiA==}
+  '@nestjs/swagger@11.2.6':
+    resolution: {integrity: sha512-oiXOxMQqDFyv1AKAqFzSo6JPvMEs4uA36Eyz/s2aloZLxUjcLfUMELSLSNQunr61xCPTpwEOShfmO7NIufKXdA==}
     peerDependencies:
       '@fastify/static': ^8.0.0 || ^9.0.0
       '@nestjs/common': ^11.0.1
@@ -1508,8 +1508,8 @@ packages:
   '@protobufjs/utf8@1.1.0':
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
 
-  '@puppeteer/browsers@2.11.2':
-    resolution: {integrity: sha512-GBY0+2lI9fDrjgb5dFL9+enKXqyOPok9PXg/69NVkjW3bikbK9RQrNrI3qccQXmDNN7ln4j/yL89Qgvj/tfqrw==}
+  '@puppeteer/browsers@2.12.0':
+    resolution: {integrity: sha512-Xuq42yxcQJ54ti8ZHNzF5snFvtpgXzNToJ1bXUGQRaiO8t+B6UM8sTUJfvV+AJnqtkJU/7hdy6nbKyA12aHtRw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -2499,8 +2499,8 @@ packages:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
 
-  chromium-bidi@13.0.1:
-    resolution: {integrity: sha512-c+RLxH0Vg2x2syS9wPw378oJgiJNXtYXUvnVAldUlt5uaHekn0CCU7gPksNgHjrH1qFhmjVXQj4esvuthuC7OQ==}
+  chromium-bidi@13.1.0:
+    resolution: {integrity: sha512-IdGNojX6S04+wgJOALzvkkIyLelhEGqI8xSctwiYJJGSi9T2eBjwAQW2UjBD/mCXv/rUkNlH2+h7jz+58vT74A==}
     peerDependencies:
       devtools-protocol: '*'
 
@@ -2907,8 +2907,8 @@ packages:
     resolution: {integrity: sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==}
     engines: {node: '>=8'}
 
-  devtools-protocol@0.0.1551306:
-    resolution: {integrity: sha512-CFx8QdSim8iIv+2ZcEOclBKTQY6BI1IEDa7Tm9YkwAXzEWFndTEzpTo5jAUhSnq24IC7xaDw0wvGcm96+Y3PEg==}
+  devtools-protocol@0.0.1566079:
+    resolution: {integrity: sha512-MJfAEA1UfVhSs7fbSQOG4czavUp1ajfg6prlAN0+cmfa2zNjaIbvq8VneP7do1WAQQIvgNJWSMeP6UyI90gIlQ==}
 
   dezalgo@1.0.4:
     resolution: {integrity: sha512-rXSP0bf+5n0Qonsb+SVVfNfIsimO4HEtmnIpPHY8Q1UCzKlQrDMfdobr8nJOOsRgWCyMRqeSBQzmWUMq7zvVig==}
@@ -4266,6 +4266,9 @@ packages:
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
 
+  lodash@4.17.23:
+    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
+
   log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
     engines: {node: '>=10'}
@@ -5176,12 +5179,12 @@ packages:
     resolution: {integrity: sha512-l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==}
     engines: {node: '>=8'}
 
-  puppeteer-core@24.36.1:
-    resolution: {integrity: sha512-L7ykMWc3lQf3HS7ME3PSjp7wMIjJeW6+bKfH/RSTz5l6VUDGubnrC2BKj3UvM28Y5PMDFW0xniJOZHBZPpW1dQ==}
+  puppeteer-core@24.37.0:
+    resolution: {integrity: sha512-WoCBK36cBlbaxwuvPWhOp2+lR6O6ynHdDuvD8rEIkxPOPpUoMXSJuyiOWhHtexJBCLaMCAJk33QdYambvQl+og==}
     engines: {node: '>=18'}
 
-  puppeteer@24.36.1:
-    resolution: {integrity: sha512-uPiDUyf7gd7Il1KnqfNUtHqntL0w1LapEw5Zsuh8oCK8GsqdxySX1PzdIHKB2Dw273gWY4MW0zC5gy3Re9XlqQ==}
+  puppeteer@24.37.0:
+    resolution: {integrity: sha512-s1jHugVhPtQjiJE6wUyonj4VEGWF+mfRDASqPMPsXgKcjZX0GaznBmcT9nLQ7bBL90phuQUqO4jiV5vTecZg4g==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -7517,14 +7520,14 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@nestjs/swagger@11.2.5(@nestjs/common@11.1.13(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.13)(class-validator@0.14.3)(reflect-metadata@0.2.2)':
+  '@nestjs/swagger@11.2.6(@nestjs/common@11.1.13(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.13)(class-validator@0.14.3)(reflect-metadata@0.2.2)':
     dependencies:
       '@microsoft/tsdoc': 0.16.0
       '@nestjs/common': 11.1.13(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nestjs/core': 11.1.13(@nestjs/common@11.1.13(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@11.1.13)(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nestjs/mapped-types': 2.1.0(@nestjs/common@11.1.13(class-validator@0.14.3)(reflect-metadata@0.2.2)(rxjs@7.8.2))(class-validator@0.14.3)(reflect-metadata@0.2.2)
       js-yaml: 4.1.1
-      lodash: 4.17.21
+      lodash: 4.17.23
       path-to-regexp: 8.3.0
       reflect-metadata: 0.2.2
       swagger-ui-dist: 5.31.0
@@ -7915,7 +7918,7 @@ snapshots:
 
   '@protobufjs/utf8@1.1.0': {}
 
-  '@puppeteer/browsers@2.11.2':
+  '@puppeteer/browsers@2.12.0':
     dependencies:
       debug: 4.4.3(supports-color@5.5.0)
       extract-zip: 2.0.1
@@ -9056,11 +9059,18 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  chromium-bidi@13.0.1(devtools-protocol@0.0.1551306):
+  chromium-bidi@13.1.0(devtools-protocol@0.0.1566079)(typescript@5.9.3):
     dependencies:
-      devtools-protocol: 0.0.1551306
+      devtools-protocol: 0.0.1566079
       mitt: 3.0.1
+      puppeteer: 24.37.0(typescript@5.9.3)
       zod: 3.25.76
+    transitivePeerDependencies:
+      - bare-abort-controller
+      - bare-buffer
+      - react-native-b4a
+      - supports-color
+      - typescript
 
   ci-info@2.0.0: {}
 
@@ -9423,7 +9433,7 @@ snapshots:
 
   detect-newline@3.1.0: {}
 
-  devtools-protocol@0.0.1551306: {}
+  devtools-protocol@0.0.1566079: {}
 
   dezalgo@1.0.4:
     dependencies:
@@ -11080,6 +11090,8 @@ snapshots:
 
   lodash@4.17.21: {}
 
+  lodash@4.17.23: {}
+
   log-symbols@4.1.0:
     dependencies:
       chalk: 4.1.2
@@ -12117,12 +12129,12 @@ snapshots:
     dependencies:
       escape-goat: 2.1.1
 
-  puppeteer-core@24.36.1:
+  puppeteer-core@24.37.0(typescript@5.9.3):
     dependencies:
-      '@puppeteer/browsers': 2.11.2
-      chromium-bidi: 13.0.1(devtools-protocol@0.0.1551306)
+      '@puppeteer/browsers': 2.12.0
+      chromium-bidi: 13.1.0(devtools-protocol@0.0.1566079)(typescript@5.9.3)
       debug: 4.4.3(supports-color@5.5.0)
-      devtools-protocol: 0.0.1551306
+      devtools-protocol: 0.0.1566079
       typed-query-selector: 2.12.0
       webdriver-bidi-protocol: 0.4.0
       ws: 8.19.0
@@ -12132,15 +12144,16 @@ snapshots:
       - bufferutil
       - react-native-b4a
       - supports-color
+      - typescript
       - utf-8-validate
 
-  puppeteer@24.36.1(typescript@5.9.3):
+  puppeteer@24.37.0(typescript@5.9.3):
     dependencies:
-      '@puppeteer/browsers': 2.11.2
-      chromium-bidi: 13.0.1(devtools-protocol@0.0.1551306)
+      '@puppeteer/browsers': 2.12.0
+      chromium-bidi: 13.1.0(devtools-protocol@0.0.1566079)(typescript@5.9.3)
       cosmiconfig: 9.0.0(typescript@5.9.3)
-      devtools-protocol: 0.0.1551306
-      puppeteer-core: 24.36.1
+      devtools-protocol: 0.0.1566079
+      puppeteer-core: 24.37.0(typescript@5.9.3)
       typed-query-selector: 2.12.0
     transitivePeerDependencies:
       - bare-abort-controller
