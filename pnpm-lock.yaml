@@ -225,8 +225,8 @@ importers:
         specifier: 24.37.2
         version: 24.37.2(typescript@5.9.3)
       stockfish:
-        specifier: 17.1.0
-        version: 17.1.0
+        specifier: 18.0.4
+        version: 18.0.4
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -5640,8 +5640,8 @@ packages:
   std-env@3.10.0:
     resolution: {integrity: sha512-5GS12FdOZNliM5mAOxFRg7Ir0pWz8MdpYm6AY6VPkGpbA7ZzmbzNcBJQ0GPvvyWgcY7QAhCgf9Uy89I03faLkg==}
 
-  stockfish@17.1.0:
-    resolution: {integrity: sha512-LvxdOzngaMjwdDKkZML4riABX9EWUkIE2ZJUsNvR2yFnM4WLiM6ggEXcBY8v53dK7uAfbxdJFcBiKTIQyGg6Zg==}
+  stockfish@18.0.4:
+    resolution: {integrity: sha512-AXHydUv4jxhAGrSzr3g4/C0pKSzaYmJ/le59Lauq059mrZEPGTY0y2HWa/4iBr/P/Iz8FxpTS2KKsDKDRqKfnQ==}
     hasBin: true
 
   streamsearch@1.1.0:
@@ -12654,7 +12654,7 @@ snapshots:
 
   std-env@3.10.0: {}
 
-  stockfish@17.1.0: {}
+  stockfish@18.0.4: {}
 
   streamsearch@1.1.0: {}
 
