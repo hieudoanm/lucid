@@ -37,7 +37,7 @@
     "semver": "7.7.4",
     "send": "1.2.1",
     "serve-static": "2.2.1",
-    "tar": "7.5.7",
+    "tar": "7.5.9",
     "webpack-dev-middleware": "7.4.5"
   },
   "pnpm": {
