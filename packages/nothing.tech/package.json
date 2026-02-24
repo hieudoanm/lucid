@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@prisma/client": "7.4.1",
-    "graphql": "16.12.0",
+    "graphql": "16.13.0",
     "html-to-pdfmake": "2.5.32",
     "jsdom": "28.1.0",
     "kafkajs": "2.2.4",
