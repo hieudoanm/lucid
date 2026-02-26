@@ -34,7 +34,7 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
   postgres:
-    image: postgres:18.2
+    image: postgres:18.3
     container_name: postgres
     restart: always
     ports:
