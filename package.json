@@ -24,7 +24,7 @@
     "turbo": "2.8.12"
   },
   "resolutions": {
-    "axios": "1.13.5",
+    "axios": "1.13.6",
     "body-parser": "2.2.2",
     "cookie": "1.1.1",
     "cross-spawn": "7.0.6",
