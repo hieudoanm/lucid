@@ -25,7 +25,7 @@
   "engines": {
     "node": "25.7.0"
   },
-  "packageManager": "pnpm@10.30.2",
+  "packageManager": "pnpm@10.30.3",
   "scripts": {
     "format": "prettier --cache --write .",
     "prelint": "pnpm prisma:generate",
