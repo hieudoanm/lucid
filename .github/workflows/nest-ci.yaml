@@ -1,4 +1,4 @@
-name: Nest.js CI
+name: Continuous Integration
 
 on:
   push:
@@ -9,42 +9,27 @@ on:
       - "feature/**"
       - "renovate/**"
       - "dependabot/**"
-    paths:
-      - "packages/micro-core-banking/typescript/**" # Only trigger when files in the `ts` folder change
 
 jobs:
   ci:
-    name: Nest.js CI
+    name: Continuous Integration
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v6
-
-      - name: Setup Node.js
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: "10.30.3"
+      - name: Install Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 25.6.0
-
-      - name: Install pnpm
-        run: npm install -g pnpm
-
-      - name: Cache pnpm store
-        uses: actions/cache@v5
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('ts/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
-
-      - name: Install dependencies
+          node-version: "25.7.0"
+      - name: Install Dependencies
         run: pnpm install
-        working-directory: packages/micro-core-banking/typescript
-
-      - name: Run build
-        run: pnpm run build
-        working-directory: packages/micro-core-banking/typescript
-
-      - name: Run tests
+      - name: Linting
+        run: pnpm run lint
+      - name: Test
         run: pnpm run test
-        working-directory: packages/micro-core-banking/typescript
+      - name: Build Production
+        run: pnpm run build
