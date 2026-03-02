@@ -28,7 +28,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: "25.6.0"
+          node-version: "25.7.0"
       - name: Install Dependencies
         run: pnpm install
       - name: Linting
