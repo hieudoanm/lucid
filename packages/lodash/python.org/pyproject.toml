@@ -5,6 +5,6 @@ description = "lodash"
 readme = "README.md"
 requires-python = "==3.14.3"
 dependencies = [
-    "black==26.1.0",
+    "black==26.3.0",
     "ruff==0.15.4",
 ]
