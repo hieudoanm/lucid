@@ -29,7 +29,7 @@
   "scripts": {
     "format": "prettier --cache --write .",
     "prelint": "pnpm prisma:generate",
-    "lint": "eslint --fix .",
+    "lint": "eslint . --fix",
     "prebuild": "rimraf build dist && pnpm prisma:generate",
     "build": "tsc --project tsconfig.build.json",
     "predev": "pnpm prisma:generate",
