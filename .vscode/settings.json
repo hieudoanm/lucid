@@ -1,11 +1,8 @@
 {
-  "editor.defaultFormatter": "golang.go",
-  "editor.insertSpaces": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "editor.wordWrap": "off",
-  "gopls": {
-    "experimentalWorkspaceModule": true
-  }
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on"
 }
