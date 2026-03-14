@@ -15,17 +15,17 @@ pdfMake.vfs = pdfFonts.vfs;
 const { window } = new JSDOM('');
 
 const main = async () => {
-  const html = await pdf2html.html(`${cwd}/examples/${NAME}.pdf`);
-  writeFileSync(`${cwd}/output/html/${NAME}.html`, html);
-  const converted = htmlToPdfmake(html, { window });
-  const docDefinition = { content: converted };
-  writeFileSync(
-    `${cwd}/output/json/${NAME}.json`,
-    JSON.stringify(docDefinition, null, 2)
-  );
-  pdfMake.createPdf(docDefinition).getBuffer((buffer) => {
-    writeFileSync(`${cwd}/output/pdf/${NAME}.pdf`, buffer);
-  });
+	const html = await pdf2html.html(`${cwd}/examples/${NAME}.pdf`);
+	writeFileSync(`${cwd}/output/html/${NAME}.html`, html);
+	const converted = htmlToPdfmake(html, { window });
+	const docDefinition = { content: converted };
+	writeFileSync(
+		`${cwd}/output/json/${NAME}.json`,
+		JSON.stringify(docDefinition, null, 2),
+	);
+	pdfMake.createPdf(docDefinition).getBuffer((buffer) => {
+		writeFileSync(`${cwd}/output/pdf/${NAME}.pdf`, buffer);
+	});
 };
 
 main();

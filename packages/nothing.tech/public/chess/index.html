@@ -1,275 +1,275 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet" />
-    <style>
-      .roboto-mono-100 {
-        font-family: 'Roboto Mono', monospace;
-        font-optical-sizing: auto;
-        font-weight: 100;
-        font-style: normal;
-      }
-      .roboto-mono-200 {
-        font-family: 'Roboto Mono', monospace;
-        font-optical-sizing: auto;
-        font-weight: 200;
-        font-style: normal;
-      }
-      .roboto-mono-300 {
-        font-family: 'Roboto Mono', monospace;
-        font-optical-sizing: auto;
-        font-weight: 100;
-        font-style: normal;
-      }
-      .roboto-mono-400 {
-        font-family: 'Roboto Mono', monospace;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-      }
-      .roboto-mono-500 {
-        font-family: 'Roboto Mono', monospace;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-      }
-      .roboto-mono-600 {
-        font-family: 'Roboto Mono', monospace;
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
-      }
-      .roboto-mono-700 {
-        font-family: 'Roboto Mono', monospace;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-      }
-    </style>
-    <title>chess.com</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  </head>
-  <body class="roboto-mono-400">
-    <div class="container mx-auto p-8">
-      <div class="flex flex-col gap-y-8">
-        <h1 class="text-center text-4xl">
-          <a href="https://chess.com" target="_blank">chess.com</a>
-          <span class="text-green-900">Titled</span>
-        </h1>
-        <div class="overflow-hidden rounded-md border">
-          <table class="w-full bg-gray-300 bg-white">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>1<sup>st</sup></th>
-                <th>Rating</th>
-                <th>2<sup>nd</sup></th>
-                <th>Rating</th>
-                <th>3<sup>rd</sup></th>
-                <th>Rating</th>
-                <th>4<sup>th</sup></th>
-                <th>Rating</th>
-                <th>National</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-t">
-                <td class="text-center">Open</td>
-                <td class="py-1 text-center">
-                  <div
-                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
-                    GM
-                  </div>
-                </td>
-                <td class="text-center text-green-900">2500+</td>
-                <td class="py-1 text-center">
-                  <div
-                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
-                    IM
-                  </div>
-                </td>
-                <td class="text-center text-green-900">2400+</td>
-                <td class="py-1 text-center">
-                  <div
-                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
-                    FM
-                  </div>
-                </td>
-                <td class="text-center text-green-900">2300+</td>
-                <td class="py-1 text-center">
-                  <div
-                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
-                    CM
-                  </div>
-                </td>
-                <td class="text-center text-green-900">2200+</td>
-                <td class="py-1 text-center">
-                  <div
-                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
-                    NM
-                  </div>
-                </td>
-              </tr>
-              <tr class="border-t">
-                <td class="text-center">Woman</td>
-                <td class="py-1 text-center">
-                  <div
-                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
-                    WGM
-                  </div>
-                </td>
-                <td class="text-center text-green-900">2300+</td>
-                <td class="py-1 text-center">
-                  <div
-                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
-                    WIM
-                  </div>
-                </td>
-                <td class="text-center text-green-900">2200+</td>
-                <td class="py-1 text-center">
-                  <div
-                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
-                    WFM
-                  </div>
-                </td>
-                <td class="text-center text-green-900">2100+</td>
-                <td class="py-1 text-center">
-                  <div
-                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
-                    WCM
-                  </div>
-                </td>
-                <td class="text-center text-green-900">2000+</td>
-                <td class="py-1 text-center">
-                  <div
-                    class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
-                    WNM
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <select
-          id="title"
-          name="title"
-          class="w-full rounded-md bg-green-900 px-4 py-2 text-center text-gray-100"
-          hx-get="/api/titled"
-          hx-trigger="click"
-          hx-target="#chart-data"
-          hx-swap="innerHTML"
-          hx-on::after-request="parseResponse(event)">
-          <option value="" disabled>Title</option>
-          <option value="GM">Open Title: GM (2500+)</option>
-          <option value="IM">Open Title: IM (2400+)</option>
-          <option value="FM">Open Title: FM (2300+)</option>
-          <option value="CM">Open Title: CM (2200+)</option>
-          <option value="NM">Open Title: NM</option>
-          <option value="WGM">Woman Title: WGM (2300+)</option>
-          <option value="WIM">Woman Title: WIM (2200+)</option>
-          <option value="WFM">Woman Title: WFM (2100+)</option>
-          <option value="WCM">Woman Title: WCM (2000+)</option>
-          <option value="WNM">Woman Title: WNM</option>
-        </select>
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div class="col-span-1">
-            <canvas id="rapidChart" class="!aspect-video !w-full"></canvas>
-          </div>
-          <div class="col-span-1">
-            <canvas id="blitzChart" class="!aspect-video !w-full"></canvas>
-          </div>
-          <div class="col-span-1">
-            <canvas id="bulletChart" class="!aspect-video !w-full"></canvas>
-          </div>
-        </div>
-        <div id="chart-data" class="hidden"></div>
-      </div>
-    </div>
-    <script type="text/javascript">
-      const charts = {};
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+			rel="stylesheet" />
+		<style>
+			.roboto-mono-100 {
+				font-family: 'Roboto Mono', monospace;
+				font-optical-sizing: auto;
+				font-weight: 100;
+				font-style: normal;
+			}
+			.roboto-mono-200 {
+				font-family: 'Roboto Mono', monospace;
+				font-optical-sizing: auto;
+				font-weight: 200;
+				font-style: normal;
+			}
+			.roboto-mono-300 {
+				font-family: 'Roboto Mono', monospace;
+				font-optical-sizing: auto;
+				font-weight: 100;
+				font-style: normal;
+			}
+			.roboto-mono-400 {
+				font-family: 'Roboto Mono', monospace;
+				font-optical-sizing: auto;
+				font-weight: 400;
+				font-style: normal;
+			}
+			.roboto-mono-500 {
+				font-family: 'Roboto Mono', monospace;
+				font-optical-sizing: auto;
+				font-weight: 500;
+				font-style: normal;
+			}
+			.roboto-mono-600 {
+				font-family: 'Roboto Mono', monospace;
+				font-optical-sizing: auto;
+				font-weight: 600;
+				font-style: normal;
+			}
+			.roboto-mono-700 {
+				font-family: 'Roboto Mono', monospace;
+				font-optical-sizing: auto;
+				font-weight: 700;
+				font-style: normal;
+			}
+		</style>
+		<title>chess.com</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://unpkg.com/htmx.org@1.9.5"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+	<body class="roboto-mono-400">
+		<div class="container mx-auto p-8">
+			<div class="flex flex-col gap-y-8">
+				<h1 class="text-center text-4xl">
+					<a href="https://chess.com" target="_blank">chess.com</a>
+					<span class="text-green-900">Titled</span>
+				</h1>
+				<div class="overflow-hidden rounded-md border">
+					<table class="w-full bg-gray-300 bg-white">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>1<sup>st</sup></th>
+								<th>Rating</th>
+								<th>2<sup>nd</sup></th>
+								<th>Rating</th>
+								<th>3<sup>rd</sup></th>
+								<th>Rating</th>
+								<th>4<sup>th</sup></th>
+								<th>Rating</th>
+								<th>National</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="border-t">
+								<td class="text-center">Open</td>
+								<td class="py-1 text-center">
+									<div
+										class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
+										GM
+									</div>
+								</td>
+								<td class="text-center text-green-900">2500+</td>
+								<td class="py-1 text-center">
+									<div
+										class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
+										IM
+									</div>
+								</td>
+								<td class="text-center text-green-900">2400+</td>
+								<td class="py-1 text-center">
+									<div
+										class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
+										FM
+									</div>
+								</td>
+								<td class="text-center text-green-900">2300+</td>
+								<td class="py-1 text-center">
+									<div
+										class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
+										CM
+									</div>
+								</td>
+								<td class="text-center text-green-900">2200+</td>
+								<td class="py-1 text-center">
+									<div
+										class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
+										NM
+									</div>
+								</td>
+							</tr>
+							<tr class="border-t">
+								<td class="text-center">Woman</td>
+								<td class="py-1 text-center">
+									<div
+										class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
+										WGM
+									</div>
+								</td>
+								<td class="text-center text-green-900">2300+</td>
+								<td class="py-1 text-center">
+									<div
+										class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
+										WIM
+									</div>
+								</td>
+								<td class="text-center text-green-900">2200+</td>
+								<td class="py-1 text-center">
+									<div
+										class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
+										WFM
+									</div>
+								</td>
+								<td class="text-center text-green-900">2100+</td>
+								<td class="py-1 text-center">
+									<div
+										class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
+										WCM
+									</div>
+								</td>
+								<td class="text-center text-green-900">2000+</td>
+								<td class="py-1 text-center">
+									<div
+										class="inline-block rounded-md bg-green-900 px-2 text-gray-100">
+										WNM
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<select
+					id="title"
+					name="title"
+					class="w-full rounded-md bg-green-900 px-4 py-2 text-center text-gray-100"
+					hx-get="/api/titled"
+					hx-trigger="click"
+					hx-target="#chart-data"
+					hx-swap="innerHTML"
+					hx-on::after-request="parseResponse(event)">
+					<option value="" disabled>Title</option>
+					<option value="GM">Open Title: GM (2500+)</option>
+					<option value="IM">Open Title: IM (2400+)</option>
+					<option value="FM">Open Title: FM (2300+)</option>
+					<option value="CM">Open Title: CM (2200+)</option>
+					<option value="NM">Open Title: NM</option>
+					<option value="WGM">Woman Title: WGM (2300+)</option>
+					<option value="WIM">Woman Title: WIM (2200+)</option>
+					<option value="WFM">Woman Title: WFM (2100+)</option>
+					<option value="WCM">Woman Title: WCM (2000+)</option>
+					<option value="WNM">Woman Title: WNM</option>
+				</select>
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+					<div class="col-span-1">
+						<canvas id="rapidChart" class="!aspect-video !w-full"></canvas>
+					</div>
+					<div class="col-span-1">
+						<canvas id="blitzChart" class="!aspect-video !w-full"></canvas>
+					</div>
+					<div class="col-span-1">
+						<canvas id="bulletChart" class="!aspect-video !w-full"></canvas>
+					</div>
+				</div>
+				<div id="chart-data" class="hidden"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			const charts = {};
 
-      const parseResponse = (event) => {
-        console.log(event);
-        if (event.detail.xhr && event.detail.xhr.response) {
-          let data = JSON.parse(event.detail.xhr.response);
-          updateChart(data);
-        }
-      };
+			const parseResponse = (event) => {
+				console.log(event);
+				if (event.detail.xhr && event.detail.xhr.response) {
+					let data = JSON.parse(event.detail.xhr.response);
+					updateChart(data);
+				}
+			};
 
-      const roundDownToHundred = (number) => {
-        return Math.floor(number / 100) * 100;
-      };
+			const roundDownToHundred = (number) => {
+				return Math.floor(number / 100) * 100;
+			};
 
-      const getKeysValues = (numbers) => {
-        const group = numbers.reduce((acc, rating) => {
-          const key = roundDownToHundred(rating);
-          if (acc[key]) {
-            acc[key]++;
-          } else {
-            acc[key] = 1;
-          }
-          return acc;
-        }, {});
-        const keys = Object.keys(group).map((key) => `${key}+`);
-        const values = Object.values(group);
-        return { keys, values };
-      };
+			const getKeysValues = (numbers) => {
+				const group = numbers.reduce((acc, rating) => {
+					const key = roundDownToHundred(rating);
+					if (acc[key]) {
+						acc[key]++;
+					} else {
+						acc[key] = 1;
+					}
+					return acc;
+				}, {});
+				const keys = Object.keys(group).map((key) => `${key}+`);
+				const values = Object.values(group);
+				return { keys, values };
+			};
 
-      const updateChart = (data) => {
-        console.log(data);
-        // Rapid
-        const rapid = data.players
-          .filter(({ chessRapidRatingBest }) => chessRapidRatingBest > 0)
-          .map(({ chessRapidRatingBest }) => chessRapidRatingBest);
-        const { keys: rapidKeys, values: rapidValues } = getKeysValues(rapid);
-        drawChart('rapidChart', 'Rapid', rapidKeys, rapidValues);
-        // Blitz
-        const blitz = data.players
-          .filter(({ chessBlitzRatingBest }) => chessBlitzRatingBest > 0)
-          .map(({ chessBlitzRatingBest }) => chessBlitzRatingBest);
-        const { keys: blitzKeys, values: blitzValues } = getKeysValues(blitz);
-        drawChart('blitzChart', 'Blitz', blitzKeys, blitzValues);
-        // Bullet
-        const bullet = data.players
-          .filter(({ chessBulletRatingBest }) => chessBulletRatingBest > 0)
-          .map(({ chessBulletRatingBest }) => chessBulletRatingBest);
-        const { keys: bulletKeys, values: bulletValues } =
-          getKeysValues(bullet);
-        drawChart('bulletChart', 'Bullet', bulletKeys, bulletValues);
-      };
+			const updateChart = (data) => {
+				console.log(data);
+				// Rapid
+				const rapid = data.players
+					.filter(({ chessRapidRatingBest }) => chessRapidRatingBest > 0)
+					.map(({ chessRapidRatingBest }) => chessRapidRatingBest);
+				const { keys: rapidKeys, values: rapidValues } = getKeysValues(rapid);
+				drawChart('rapidChart', 'Rapid', rapidKeys, rapidValues);
+				// Blitz
+				const blitz = data.players
+					.filter(({ chessBlitzRatingBest }) => chessBlitzRatingBest > 0)
+					.map(({ chessBlitzRatingBest }) => chessBlitzRatingBest);
+				const { keys: blitzKeys, values: blitzValues } = getKeysValues(blitz);
+				drawChart('blitzChart', 'Blitz', blitzKeys, blitzValues);
+				// Bullet
+				const bullet = data.players
+					.filter(({ chessBulletRatingBest }) => chessBulletRatingBest > 0)
+					.map(({ chessBulletRatingBest }) => chessBulletRatingBest);
+				const { keys: bulletKeys, values: bulletValues } =
+					getKeysValues(bullet);
+				drawChart('bulletChart', 'Bullet', bulletKeys, bulletValues);
+			};
 
-      const drawChart = (chartId, chartName, keys, values) => {
-        const context = document.getElementById(chartId).getContext('2d');
+			const drawChart = (chartId, chartName, keys, values) => {
+				const context = document.getElementById(chartId).getContext('2d');
 
-        // ✅ Destroy the existing chart if it exists
-        if (charts[chartId]) {
-          charts[chartId].destroy();
-        }
+				// ✅ Destroy the existing chart if it exists
+				if (charts[chartId]) {
+					charts[chartId].destroy();
+				}
 
-        charts[chartId] = new Chart(context, {
-          type: 'bar',
-          data: {
-            labels: keys,
-            datasets: [
-              {
-                label: chartName,
-                data: values,
-                backgroundColor: '#0d542b',
-              },
-            ],
-          },
-        });
-        charts[chartId].update();
-      };
-    </script>
-  </body>
+				charts[chartId] = new Chart(context, {
+					type: 'bar',
+					data: {
+						labels: keys,
+						datasets: [
+							{
+								label: chartName,
+								data: values,
+								backgroundColor: '#0d542b',
+							},
+						],
+					},
+				});
+				charts[chartId].update();
+			};
+		</script>
+	</body>
 </html>

@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 declare module 'pdfmake/build/pdfmake' {
-  const pdfMake: any;
-  export = pdfMake;
+	const pdfMake: any;
+	export = pdfMake;
 }
 
 declare module 'pdfmake/build/vfs_fonts' {
-  const vfsFonts: any;
-  export = vfsFonts;
+	const vfsFonts: any;
+	export = vfsFonts;
 }

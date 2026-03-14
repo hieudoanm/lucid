@@ -1,65 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x+icon" />
-    <title>PDFMake</title>
-  </head>
-  <body class="h-screen bg-gray-100 text-gray-900">
-    <div class="mx-auto flex h-full flex-col gap-y-8 p-8">
-      <form
-        class="flex flex-col gap-y-8"
-        hx-swap="none"
-        hx-post="/api/pdfmake/convert"
-        hx-encoding="multipart/form-data"
-        hx-on::after-request="parseResponse(event)">
-        <label
-          for="file"
-          class="flex items-center justify-center rounded border border-dashed border-gray-900 py-8">
-          <input
-            id="file"
-            type="file"
-            name="file"
-            class="hidden"
-            accept="application/pdf"
-            onchange="updateFileLabel(event)"
-            required />
-          <span id="fileUploadLabel">Upload File</span>
-        </label>
-        <button type="submit" class="rounded bg-green-900 p-2 text-white">
-          Submit File
-        </button>
-      </form>
-      <div class="grow">
-        <textarea
-          placeholder="Results"
-          id="results"
-          class="h-full w-full rounded border border-dashed border-gray-900 bg-gray-100 p-4 text-gray-900"
-          readonly></textarea>
-      </div>
-    </div>
-    <script type="text/javascript">
-      const parseResponse = (event) => {
-        const data = JSON.parse(event.detail.xhr.response);
-        document.getElementById('results').innerHTML = JSON.stringify(
-          data,
-          null,
-          2
-        );
-      };
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://unpkg.com/htmx.org@1.9.5"></script>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x+icon" />
+		<title>PDFMake</title>
+	</head>
+	<body class="h-screen bg-gray-100 text-gray-900">
+		<div class="mx-auto flex h-full flex-col gap-y-8 p-8">
+			<form
+				class="flex flex-col gap-y-8"
+				hx-swap="none"
+				hx-post="/api/pdfmake/convert"
+				hx-encoding="multipart/form-data"
+				hx-on::after-request="parseResponse(event)">
+				<label
+					for="file"
+					class="flex items-center justify-center rounded border border-dashed border-gray-900 py-8">
+					<input
+						id="file"
+						type="file"
+						name="file"
+						class="hidden"
+						accept="application/pdf"
+						onchange="updateFileLabel(event)"
+						required />
+					<span id="fileUploadLabel">Upload File</span>
+				</label>
+				<button type="submit" class="rounded bg-green-900 p-2 text-white">
+					Submit File
+				</button>
+			</form>
+			<div class="grow">
+				<textarea
+					placeholder="Results"
+					id="results"
+					class="h-full w-full rounded border border-dashed border-gray-900 bg-gray-100 p-4 text-gray-900"
+					readonly></textarea>
+			</div>
+		</div>
+		<script type="text/javascript">
+			const parseResponse = (event) => {
+				const data = JSON.parse(event.detail.xhr.response);
+				document.getElementById('results').innerHTML = JSON.stringify(
+					data,
+					null,
+					2,
+				);
+			};
 
-      const updateFileLabel = (event) => {
-        const file = event.target.files[0];
-        const label = document.getElementById('fileUploadLabel');
-        if (file) {
-          label.textContent = file.name;
-        } else {
-          label.textContent = 'Upload File';
-        }
-      };
-    </script>
-  </body>
+			const updateFileLabel = (event) => {
+				const file = event.target.files[0];
+				const label = document.getElementById('fileUploadLabel');
+				if (file) {
+					label.textContent = file.name;
+				} else {
+					label.textContent = 'Upload File';
+				}
+			};
+		</script>
+	</body>
 </html>
