@@ -47,7 +47,7 @@ services:
       - pgdata:/var/lib/postgresql/data
 
   zookeeper:
-    image: confluentinc/cp-zookeeper:7.9.5
+    image: confluentinc/cp-zookeeper:7.9.6
     container_name: zookeeper
     restart: always
     environment:
