@@ -19,7 +19,7 @@ overrides:
   send: 1.2.1
   serve-static: 2.2.1
   tar: 7.5.12
-  webpack-dev-middleware: 7.4.5
+  webpack-dev-middleware: 8.0.0
 
 importers:
 
