@@ -12,7 +12,7 @@ overrides:
   debug: 4.4.3
   express: 5.2.1
   got: 14.6.6
-  marked: 17.0.4
+  marked: 17.0.5
   nanoid: 5.1.7
   postcss: 8.5.8
   semver: 7.7.4
@@ -4427,8 +4427,8 @@ packages:
   mappersmith@2.46.1:
     resolution: {integrity: sha512-Ac9UGnHmf5rNtbOxe/SmEwtFPmb2/ronEwQbWcS6uA6nXxGPyr+dhPpTmzCTmZosdc8reFdeSqOy+khEkCFogA==}
 
-  marked@17.0.4:
-    resolution: {integrity: sha512-NOmVMM+KAokHMvjWmC5N/ZOvgmSWuqJB8FoYI019j4ogb/PeRMKoKIjReZ2w3376kkA8dSJIP8uD993Kxc0iRQ==}
+  marked@17.0.5:
+    resolution: {integrity: sha512-6hLvc0/JEbRjRgzI6wnT2P1XuM1/RrrDEX0kPt0N7jGm1133g6X7DlxFasUIx+72aKAr904GTxhSLDrd5DIlZg==}
     engines: {node: '>= 20'}
     hasBin: true
 
@@ -9628,7 +9628,7 @@ snapshots:
 
   docsify@4.13.1:
     dependencies:
-      marked: 17.0.4
+      marked: 17.0.5
       medium-zoom: 1.1.0
       opencollective-postinstall: 2.0.3
       prismjs: 1.30.0
@@ -11454,7 +11454,7 @@ snapshots:
 
   mappersmith@2.46.1: {}
 
-  marked@17.0.4: {}
+  marked@17.0.5: {}
 
   math-intrinsics@1.1.0: {}
 
