@@ -18,7 +18,7 @@ overrides:
   semver: 7.7.4
   send: 1.2.1
   serve-static: 2.2.1
-  tar: 7.5.12
+  tar: 7.5.13
   webpack-dev-middleware: 8.0.0
 
 importers:
@@ -5853,8 +5853,8 @@ packages:
   tar-stream@3.1.7:
     resolution: {integrity: sha512-qJj60CXt7IU1Ffyc3NJMjh6EkuCFej46zUqJ4J7pqYlThyd9bO0XBTmcOIhSzZJVWfsLks0+nle/j538YAW9RQ==}
 
-  tar@7.5.12:
-    resolution: {integrity: sha512-9TsuLcdhOn4XztcQqhNyq1KOwOOED/3k58JAvtULiYqbO8B/0IBAAIE1hj0Svmm58k27TmcigyDI0deMlgG3uw==}
+  tar@7.5.13:
+    resolution: {integrity: sha512-tOG/7GyXpFevhXVh8jOPJrmtRpOTsYqUIkVdVooZYJS/z8WhfQUX8RJILmeuJNinGAMSu1veBr4asSHFt5/hng==}
     engines: {node: '>=18'}
 
   term-size@2.2.1:
@@ -9005,7 +9005,7 @@ snapshots:
       promise-inflight: 1.0.1
       rimraf: 3.0.2
       ssri: 8.0.1
-      tar: 7.5.12
+      tar: 7.5.13
       unique-filename: 1.1.1
     transitivePeerDependencies:
       - bluebird
@@ -9028,7 +9028,7 @@ snapshots:
       promise-inflight: 1.0.1
       rimraf: 3.0.2
       ssri: 9.0.1
-      tar: 7.5.12
+      tar: 7.5.13
       unique-filename: 2.0.1
     transitivePeerDependencies:
       - bluebird
@@ -9045,7 +9045,7 @@ snapshots:
       minipass-pipeline: 1.2.4
       p-map: 4.0.0
       ssri: 10.0.6
-      tar: 7.5.12
+      tar: 7.5.13
       unique-filename: 3.0.0
 
   cacheable-lookup@7.0.0: {}
@@ -11604,7 +11604,7 @@ snapshots:
       npmlog: 6.0.2
       rimraf: 3.0.2
       semver: 7.7.4
-      tar: 7.5.12
+      tar: 7.5.13
       which: 2.0.2
     transitivePeerDependencies:
       - bluebird
@@ -11621,7 +11621,7 @@ snapshots:
       npmlog: 6.0.2
       rimraf: 3.0.2
       semver: 7.7.4
-      tar: 7.5.12
+      tar: 7.5.13
       which: 2.0.2
     transitivePeerDependencies:
       - bluebird
@@ -11934,7 +11934,7 @@ snapshots:
       read-package-json-fast: 2.0.3
       rimraf: 3.0.2
       ssri: 8.0.1
-      tar: 7.5.12
+      tar: 7.5.13
     transitivePeerDependencies:
       - bluebird
       - supports-color
@@ -11958,7 +11958,7 @@ snapshots:
       read-package-json-fast: 3.0.2
       sigstore: 1.9.0
       ssri: 10.0.6
-      tar: 7.5.12
+      tar: 7.5.13
     transitivePeerDependencies:
       - bluebird
       - supports-color
@@ -12976,7 +12976,7 @@ snapshots:
       - bare-abort-controller
       - react-native-b4a
 
-  tar@7.5.12:
+  tar@7.5.13:
     dependencies:
       '@isaacs/fs-minipass': 4.0.1
       chownr: 3.0.0
