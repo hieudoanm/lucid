@@ -41,7 +41,7 @@
     "send": "1.2.1",
     "serve-static": "2.2.1",
     "tar": "7.5.13",
-    "webpack-dev-middleware": "8.0.1"
+    "webpack-dev-middleware": "8.0.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
