@@ -1,5 +1,5 @@
 # Use the official NGINX image as a base image
-FROM nginx:1.29.6
+FROM nginx:1.29.7
 
 # Copy the custom nginx.conf to the container
 # Replace "nginx.conf" with your custom configuration file
