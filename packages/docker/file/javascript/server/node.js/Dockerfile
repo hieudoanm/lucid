@@ -9,7 +9,7 @@ COPY . /home/node/app
 
 RUN pnpm install & pnpm build
 
-FROM node:25.8.1-alpine
+FROM node:25.8.2-alpine
 
 # Update system packages to reduce vulnerabilities
 RUN apk update && apk upgrade
