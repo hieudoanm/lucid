@@ -22,7 +22,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@kafkajs/confluent-schema-registry": "3.9.0",
+    "@kafkajs/confluent-schema-registry": "4.0.8",
     "@nestjs/axios": "4.0.1",
     "@nestjs/common": "11.1.17",
     "@nestjs/core": "11.1.17",
