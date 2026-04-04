@@ -1,0 +1,100 @@
+[
+  {
+    "no": 1,
+    "country": "China",
+    "company": "Alibaba",
+    "name": "Qwen Chat",
+    "chat": "https://chat.qwen.ai"
+  },
+  {
+    "no": 2,
+    "country": "China",
+    "company": "DeepSeek",
+    "name": "DeepSeek",
+    "chat": "https://chat.deepseek.com"
+  },
+  {
+    "no": 3,
+    "country": "China",
+    "company": "Moonshot AI",
+    "name": "Kimi",
+    "chat": "https://kimi.moonshot.cn"
+  },
+  {
+    "no": 4,
+    "country": "France",
+    "company": "Mistral",
+    "name": "Mistral Chat",
+    "chat": "https://chat.mistral.ai"
+  },
+  {
+    "no": 5,
+    "country": "United States",
+    "company": "Anthropic",
+    "name": "Claude",
+    "chat": "https://claude.ai"
+  },
+  {
+    "no": 6,
+    "country": "United States",
+    "company": "Character.AI",
+    "name": "Character AI",
+    "chat": "https://character.ai"
+  },
+  {
+    "no": 7,
+    "country": "United States",
+    "company": "Google",
+    "name": "Gemini",
+    "chat": "https://gemini.google.com"
+  },
+  {
+    "no": 8,
+    "country": "United States",
+    "company": "Inflection",
+    "name": "Pi",
+    "chat": "https://pi.ai"
+  },
+  {
+    "no": 9,
+    "country": "United States",
+    "company": "Meta",
+    "name": "Meta AI",
+    "chat": "https://www.meta.ai"
+  },
+  {
+    "no": 10,
+    "country": "United States",
+    "company": "Microsoft",
+    "name": "Copilot",
+    "chat": "https://copilot.microsoft.com"
+  },
+  {
+    "no": 11,
+    "country": "United States",
+    "company": "OpenAI",
+    "name": "ChatGPT",
+    "chat": "https://chatgpt.com"
+  },
+  {
+    "no": 12,
+    "country": "United States",
+    "company": "Perplexity",
+    "name": "Perplexity AI",
+    "chat": "https://www.perplexity.ai"
+  },
+  {
+    "no": 13,
+    "country": "United States",
+    "company": "Quora",
+    "name": "Poe",
+    "chat": "https://poe.com"
+  },
+  {
+    "no": 14,
+    "country": "United States",
+    "company": "xAI",
+    "name": "Grok",
+    "chat": "https://grok.x.ai"
+  }
+]
