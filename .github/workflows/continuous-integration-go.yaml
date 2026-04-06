@@ -48,8 +48,7 @@ jobs:
           tag_name: 'cli-latest'
           name: Latest CLI Release
           body: 'Automated Build for CLI latest commit on master.'
-          prerelease: true
           files: |
-            packages/cli/bin/free.router
+            packages/cli/bin/lucid
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
